@@ -1,0 +1,43 @@
+/* MP42 Jadaene Brown 1903233 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-brand-rich: #064e3b;
+  --color-brand-light: #ecfdf5;
+  --color-slate-surface: #f1f5f9;
+  --color-slate-card: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply antialiased scroll-smooth text-[13px] text-slate-700 bg-slate-surface dark:bg-slate-950 dark:text-slate-400 transition-colors duration-300;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3 rounded shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  .tag {
+    @apply text-[10px] uppercase font-bold px-1.5 py-0.5 rounded tracking-wider transition-colors;
+  }
+  
+  .tag-green { @apply bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-400; }
+  .tag-amber { @apply bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-400; }
+  .tag-red { @apply bg-red-100 dark:bg-red-500/20 text-red-800 dark:text-red-400; }
+  .tag-slate { @apply bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300; }
+
+  .progress-bg { @apply h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mt-2 transition-colors; }
+  .progress-fill { @apply h-full bg-emerald-500 rounded-full transition-all duration-1000; }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}

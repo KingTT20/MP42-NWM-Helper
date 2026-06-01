@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile containing connection details and basic settings.",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["email", "createdAt", "updatedAt"]
+    },
+    "LogEntry": {
+      "title": "LogEntry",
+      "description": "Logbook entry mapping to user's activity in the smart farm.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "type": { "type": "string" },
+        "value": { "type": "string" },
+        "date": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "type", "value", "date", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Stores user profile data."
+    },
+    "/logs/{logId}": {
+      "schema": "LogEntry",
+      "description": "Stores digital logbook entries for farming operations."
+    }
+  }
+}
