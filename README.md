@@ -5,7 +5,7 @@ WNM Helper is an intelligent application designed to manage, monitor, and assist
 
 
 
----
+
 
 ### Desktop Application (Windows Installer)
 If you have been provided with the `WNM-helper setup.exe` file:
@@ -17,7 +17,7 @@ If you have been provided with the `WNM-helper setup.exe` file:
 
 *(Note: Once installed, you do not need to keep the original setup.exe file in the same folder as the installed program. The installed app runs independently).*
 
----
+
 
 
 
@@ -25,31 +25,31 @@ If you have been provided with the `WNM-helper setup.exe` file:
 
 1. **Open your Terminal or Command Prompt:**
    Navigate into the project directory where you extracted the files:
-   ```bash
+  bash
    cd path/to/wnm-helper
-   ```
+
 
 2. **Install Dependencies:**
    Run the following command to download all required software packages:
-   ```bash
+  bash
    npm install
-     ```
+   
 
 3. **Start the Application:**
    Start the local development server by running:
-   ```bash
+  bash
    npm run dev
-   ```
+
    *The terminal will display a local URL (e.g., `http://localhost:3000`). Open that link in your web browser to view the application.*
 
 4. **Building the App (Optional):**
    If you want to compile the project into static files for deployment, run:
-   ```bash
+ bash
    npm run build
-   ```
+
    This will generate a `dist` folder containing the compiled, production-ready website.
 
----
+
 
 ## 🛠 Troubleshooting
 - **Missing Images/Logos:** Ensure that your image files (like `Yam.png`, `Tomato.jpg`, `WNM logo 2.png`) are located inside the correct root directory or `public/` folder before launching the application or building your `.exe`.
