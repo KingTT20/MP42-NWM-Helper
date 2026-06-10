@@ -1,4 +1,4 @@
-```mermaid
+
 graph TD
     A[Farmer / User] -->|Launches App| B(Authentication/Login)
     B -->|Verified| C{Main Dashboard}
@@ -14,5 +14,4 @@ graph TD
     H --> I
     
     I -->|Analyzes Data| J[Expert Fertilizer & Watering Advice]
-    J -->|Displayed on UI| F
-```
+    J -->|Displayed on UI| 
